@@ -1,6 +1,6 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
-const autherText = document.getElementById('auther');
+const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 
@@ -13,7 +13,7 @@ async function getQuote() {
         const data = await response.json();        
         authorText.innerText = data.quoteAuthor;
         quoteText.innerText = data.quoteText;
-        console.log(data);
+
     } catch (error) {
        getQuote();        
     }
